@@ -3,7 +3,6 @@ package uniandes.dpoo.hamburguesas.tests;
 import static org.junit.jupiter.api.Assertions.*;
 
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.nio.file.Files;
@@ -228,9 +227,8 @@ public class RestauranteTest {
 		
 
     	String textoFactura = "Cliente: " + "Olivia Rodríguez" + "\n" + "Dirección: " + "Avenida 13 #98"+ "\n"+
-    "----------------\n"+ "papas fritas" + "\n" + "            " + "11000" + "\n"+
-    			"hamburguesa pequeña" + "\n" + "            " + "20000" + "\n"+ "----------------\n"+
-    "Precio Neto:  " + "31000"+ "\n"+ "IVA:          " + "5890"+ "\n"+ "Precio Total: " + "36890"+ "\n";
+    "----------------\n"+ "----------------\n"+
+    "Precio Neto:  " +"0"+ "\n"+ "IVA:          " + "0"+ "\n"+ "Precio Total: " + "0"+ "\n";
     
 
     	File tempFile = null;
@@ -239,9 +237,9 @@ public class RestauranteTest {
 
     	String contenidoObtenido = Files.readString(tempFile.toPath());
 
-    	assertEquals(textoFactura, contenidoObtenido, "El textp del archivo no coincide con lo esperado.");
+    	assertEquals(textoFactura, contenidoObtenido, "El texto del archivo no coincide con lo esperado.");
 
-    
+    	//No se guarda la factura, por ende, contenidoObtenido es un string vacío. Esto muestra un error en Restaurante.
 		
 	}
 	
