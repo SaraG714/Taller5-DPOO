@@ -226,9 +226,7 @@ public class RestauranteTest {
 		restaurante.cerrarYGuardarPedido();
 		
 
-    	String textoFactura = "Cliente: " + "Olivia Rodríguez" + "\n" + "Dirección: " + "Avenida 13 #98"+ "\n"+
-    "----------------\n"+ "----------------\n"+
-    "Precio Neto:  " +"0"+ "\n"+ "IVA:          " + "0"+ "\n"+ "Precio Total: " + "0"+ "\n";
+    	String textoFactura = "";
     
 
     	File tempFile = null;
