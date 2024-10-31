@@ -239,7 +239,8 @@ public class RestauranteTest {
 
     	assertEquals(textoFactura, contenidoObtenido, "El texto del archivo no coincide con lo esperado.");
 
-    	//No se guarda la factura, por ende, contenidoObtenido es un string vacío. Esto muestra un error en Restaurante.
+    	//No se guarda la factura, por ende, contenidoObtenido es un string vacío. Esto muestra un error en Restaurante. 
+    	//Iván dijo que solo debíamos detectar los errores, no necesariamente corregirlos.
 		
 	}
 	
